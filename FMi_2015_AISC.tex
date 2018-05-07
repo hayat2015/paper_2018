@@ -1,0 +1,143 @@
+4tr
+%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is the LaTeX source for the instructions to authors using
+% the LaTeX document class 'llncs.cls' for contributions to
+% the Lecture Notes in Computer Sciences series.
+% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
+%
+% It may be used as a template for your own input - copy it
+% to a new file with a new name and use it as the basis
+% for your article.
+%
+% NB: the document class 'llncs' has its own and detailed documentation, see
+% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+\usepackage{url}
+%\usepackage{url}
+%\urldef{\mailsa}\path|{sbendoukha, .haas, frank.holzwarth,|
+%\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
+%\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|    
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+\input{./newcommands}
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{On the Use of Reference Nets for Building Cloud-based Scientific Workflows}
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Cloud-based Image Processing}
+
+% the name(s) of the author(s) follow(s) next
+%
+% NB: Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{Hayat Bendoukha\inst{1}%
+%\thanks{Please note that the LNCS Editorial assumes that all authors have used
+%the western naming convention, with given names preceding surnames. This determines
+%the structure of the names in the running heads and the author index.}%
+\and Sofiane Bendoukha\inst{2}\and Yahya Slimani \inst{3}}
+%
+\authorrunning{Hayat Bendoukha et al.}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next; don't give your e-mail address
+% unless you accept that it will be published
+\institute{Department of Computer Science\\
+Faculty of Mathematics and Computer Science\\
+Université des Sciences et de la Technologie d'Oran Mohamed Boudiaf, USTO-MB, BP 1505, El M'naouer,  31000  Oran Algérie\\
+\texttt{bendoukhayat@univ-usto.dz}
+\and
+Theoretical Foundations of Computer Science (TGI)\\
+Department of Informatics, University of Hamburg, Germany\\
+\texttt{sbendoukha@informatik.uni-hamburg.de}\\
+\and
+Département Informatique
+Institut Supérieur des Arts Multimédia (ISAMM)
+Université de la Manouba
+ \\
+Campus Universitaire, 2010 Manouba, Tunisie\\
+\texttt{yahya.slimani@fst.rnu.tn}
+}
+ 
+%
+% NB: a more complex sample for affiliations and the mapping to the
+% corresponding authors can be found in the file "llncs.dem"
+% (search for the string "\mainmatter" where a contribution starts).
+% "llncs.dem" accompanies the document class "llncs.cls".
+%
+
+\toctitle{Lecture Notes in Computer Science}
+\tocauthor{Sofiane Bendoukha, Hayat Bendoukha, Daniel Moldt}
+\maketitle
+
+
+\begin{abstract}
+Cloud computing provides scientists with a large number of powerful resources.
+%
+These resources enhance the productivity of the whole system.
+%
+Running complex scientific workflows on Cloud resources rather then on-premise increases the performance of execution.
+%
+Nevertheless, traditional scientific workflow management (SWfM) systems are not yet adapted for the Cloud.
+%
+Creation of scientific workflows and their execution in the Cloud still face many challenges due to the complexity of the Cloud environment. 
+%
+Migrating a part or the whole scientific application to the Cloud is not trivial .
+%
+It should be based on a solid strategy.
+%
+Questions like: Where to store the data and where to execute the processes need to be investigated.
+%
+In this paper, we first present \RenewGrass{}, a tool for modeling and executing image processing workflows by \emph{reference nets}.
+%
+Then, we discuss the deployment of \RenewGrass{} into the Cloud.
+%
+This work includes also a use case example related to the remote sensing domain.
+%
+%Here we should emphasize the results provided in this paper.
+
+
+\keywords{Workflows, \RenewGrass, Petri Nets, Cloud computing, Image processing}
+\end{abstract}
+
+
+\section{Introduction}
+\input{introduction}
+
+\section{Related Work and Background}
+\input{functionality}
+
+\section{\RenewGrass{}}
+\input{grassintegration}
+
+\section{\RenewGrass{} in the Cloud}
+\input{cloudmigration}
+
+
+\section{Discussion}
+\input{discussion}
+
+\section{Conclusion}
+\input{conclusion}
+
+
+
+
+\bibliography{FMi_2015_AISC}
+
+\bibliographystyle{plain}
+\end{document}
